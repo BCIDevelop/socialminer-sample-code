@@ -20,7 +20,7 @@
  * Cisco SocialMiner release and/or request help from the Cisco Developer Network
  * (http://developer.cisco.com) or the Cisco Technical Assistance Center
  */
-
+require('dotenv').config();
 const express = require("express");
 const health = require("express-ping");
 const bodyParser = require("body-parser");
@@ -44,7 +44,7 @@ app.use(health.ping());
 
 // setup routes
 app.use("/", indexRoute);
-app.use("/webhook", fbWebhookRoute);
+
 
 // Start the web service
 app.listen(process.env.PORT, () => {

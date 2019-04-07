@@ -27,10 +27,10 @@ const logger = require("./logger");
 const sessionManager = require("../session/session_manager");
 
 // constants
-const CHAT_TITLE = "Chat from Facebook Messenger";
-const CCX_QUEUETAG_PREFIX = "Chat_Csq";
-const CHAT_FEED_REFURL = "http://%s/ccp-webapp/ccp/feed/%s";
-const CHAT_URL = "http://%s/ccp/chat";
+const CHAT_TITLE = "Chat from WP";
+const CCX_QUEUETAG_PREFIX = "Chat_Csq2";
+const CHAT_FEED_REFURL = "http://197.187.4.22/ccp-webapp/ccp/feed/100000";
+const CHAT_URL = "http://197.187.4.22/ccp/chat";
 const CHAT_EVENTS_QUERY_PARAMS = "?all=false&eventid=";
 const MIME_XML = "application/xml";
 

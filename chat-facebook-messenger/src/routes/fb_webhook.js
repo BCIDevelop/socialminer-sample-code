@@ -58,6 +58,7 @@ const fbmBot = new Botly({
  * @param {String} senderId
  * @param {*} err
  */
+/*
 const _abortSessionOnError = (senderId, err) => {
     utils.logErrorWithStackTrace(err);
     // inform the customer that something went wrong
@@ -65,20 +66,21 @@ const _abortSessionOnError = (senderId, err) => {
     // cleanup the session, it is no longer needed
     sessionManager.destroySession(senderId);
 };
-
+/*
 /**
  * "Promisified" wrapper function to get user profile
  * by ID from facebook
  *
  * @param {String} userId
  */
+/*
 const _getUserProfile = userId => new Promise((resolve, reject) => {
     fbmBot.getUserProfile(userId, (err, data) => {
         if (!err) resolve(data);
         else reject(err);
     });
 });
-
+/*
 /**
  * Sends a message to the user on FBM to wait
  * while the contact is being injected, queued
@@ -86,12 +88,13 @@ const _getUserProfile = userId => new Promise((resolve, reject) => {
  *
  * @param {String} senderId
  */
+/*
 const _askUserToWait = (senderId) => {
     fbmBot.sendText({ id: senderId, text: MESSAGES.PLEASE_WAIT_FOR_AGENT });
     // change state to WAITING, because we are waiting for agent to join
     sessionManager.setState(senderId, STATES.WAITING);
 };
-
+*/
 const _handleAgentJoined = (senderId) => {
     const thisSession = sessionManager.getSession(senderId);
     // the session is now in TALKING state
@@ -109,6 +112,7 @@ const _handleAgentLeft = (senderId) => {
     //        illustration purposes only. When the FB user actually
     //        makes a selection, we will have to handle it here
     //        (and possibly keep the session alive until then)
+    /*
     fbmBot.sendText({
         id: senderId,
         text: MESSAGES.CHAT_ENDED,
@@ -118,6 +122,7 @@ const _handleAgentLeft = (senderId) => {
             fbmBot.createQuickReply(MESSAGES.SURVEY_LOW, "low"),
         ],
     });
+    */
     // end the session
     sessionManager.destroySession(senderId);
     logger.info("Session [ID=%s] is ended.", senderId);

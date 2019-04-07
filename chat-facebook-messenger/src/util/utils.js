@@ -26,8 +26,6 @@ const logger = require("../util/logger");
 
 const MANDATORY_ENV_VARS = [
     "PORT",
-    "FB_PAGE_ACCESS_TOKEN",
-    "FB_VERIFICATION_TOKEN",
     "VIRTUAL_ASSISTANT_NAME",
     "SOCIALMINER_HOST",
     "SOCIALMINER_CHAT_FEED_ID",
